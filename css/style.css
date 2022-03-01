@@ -1,0 +1,70 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: cursive;
+}
+
+table,
+th,
+tr,
+td {
+    border-bottom: 2px solid #b4b4b4;
+    border-collapse: collapse;
+    padding: 1rem;
+    width: 50%;
+    text-align: left;
+}
+
+table {
+    width: 100%;
+}
+
+thead {
+    color: #fff;
+    background-color: #19d419;
+}
+
+tr:nth-child(even) {
+    color: #fff;
+    background-color: #3af63a;
+}
+
+tbody tr,
+tfoot th {
+    text-align: left;
+}
+
+button {
+    background-color: #19d419;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    margin: 0.5rem;
+    padding: 0.8rem 1.6rem;
+}
+
+button:hover {
+    background-color: #3af63a;
+    cursor: pointer;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.container {
+    width: 90%;
+    margin: 5rem auto;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
+    width: 100%;
+}

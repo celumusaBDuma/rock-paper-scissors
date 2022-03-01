@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MDN JavaScript</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Rock - Paper - Scissors - Play!</h1>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Choice</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Computer</td>
+                        <td id="computer-choice"></td>
+                        <td id="computer-score">0</td>
+                    </tr>
+                    <tr>
+                        <td>User</td>
+                        <td id="user-choice"></td>
+                        <td id="user-score">0</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Result</th>
+                        <th id="result"></th>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="choices">
+                <button id="Rock">Rock</button>
+                <button id="Paper">Paper</button>
+                <button id="Scissors">Scissors</button>
+            </div>
+        </div>
+        <script src="js/index.js"></script>
+    </body>
+</html>
