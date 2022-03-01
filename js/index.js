@@ -2,15 +2,17 @@ const computerChoiceDisplay = document.getElementById("computer-choice");
 const computerScoreDisplay = document.getElementById("computer-score");
 
 const userChoiceDisplay = document.getElementById("user-choice");
-const userScoreDisplay = document.getElementById("computer-score");
+const userScoreDisplay = document.getElementById("user-score");
 
 const result = document.getElementById("result");
 const options = document.querySelectorAll("button");
 
-let userChoice = "";
+
 let computerChoice = getComputerChoice();
 let computerScore = computerScoreDisplay.innerHTML;
-alert(computerScore);
+
+let userChoice = "";
+let userScore = userScoreDisplay.innerHTML;
 
 console.log(computerChoice);
 options.forEach((options) =>
@@ -21,27 +23,27 @@ options.forEach((options) =>
         userChoiceDisplay.innerHTML = userChoice;
         computerChoiceDisplay.innerHTML = computerChoice;
 
-        console.log(computerChoice);
-
         if (userChoice === "Rock" && computerChoice === "Paper") {
-            computerScore++;
+            computerScoreDisplay.innerHTML = ++computerScore;
             result.innerHTML = "Computer Wins";
         } else if (userChoice === "Rock" && computerChoice === "Scissors") {
-            userScore++;
+            userScoreDisplay.innerHTML = ++userScore;
             result.innerHTML = "You Win";
         } else if (userChoice === "Paper" && computerChoice === "Scissors") {
-            computerScore++;
+            computerScoreDisplay.innerHTML = ++computerScore;
             result.innerHTML = "Computer Wins";
         } else if (userChoice === "Paper" && computerChoice === "Rock") {
-            userScore++;
+            userScoreDisplay.innerHTML = ++userScore;
             result.innerHTML = "You Win";
         } else if (userChoice === "Scissors" && computerChoice === "Rock") {
-            computerScore++;
+            computerScoreDisplay.innerHTML = ++computerScore;
             result.innerHTML = "Computer Wins";
         } else if (userChoice === "Scissors" && computerChoice === "Paper") {
-            computerScore++;
-            result.innerHTML = "Computer Wins";
-        } else result.innerHTML = "Draw";
+            userScoreDisplay.innerHTML = ++userScore;
+            result.innerHTML = "You Win";
+        } else {
+            result.innerHTML = "Draw";
+        }
     })
 );
 
